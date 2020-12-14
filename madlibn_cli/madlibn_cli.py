@@ -35,13 +35,13 @@ def get_questions(template):
     new_list = []
     for i in range(count):
         start = template.find("{", end) + 1
-        end = template.find("{", start)
+        end = template.find("}", start)
         word = template[start:end]
         new_list.append(word)
     return(new_list)
 
 def prompt_user(word):
-    return f'*** Please enter one {word}? ***'
+    return f'*** Please enter one {word} ***'
 
 def get_user_input(list):
     for question in list:
@@ -78,7 +78,7 @@ def write_file(path, template):
 if __name__ == "__main__":
     template = read_template('assets/spam.txt')
     welcome()
-    new_list = get_question(template)
+    new_list = get_questions(template)
     user_dict = get_user_input(new_list)
     new_template = create_string(template, user_dict)
     write_file('assets/new_template.txt,new_template')
