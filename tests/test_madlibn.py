@@ -1,6 +1,6 @@
 import pytest
 
-from madlibn_cli.madlibn import read_template, get_questions, create_string, prompt_user
+from madlibn_cli.madlibn_cli import read_template, get_questions, create_string, prompt_user
 
 #checks new_list for the missing components
 def test_get_question():

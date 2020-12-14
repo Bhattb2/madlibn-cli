@@ -29,7 +29,7 @@ def read_template(path):
         template = template.strip()
         return template
 
-def get_question(template):
+def get_questions(template):
     count = template.count("{")
     end = 0
     new_list = []
