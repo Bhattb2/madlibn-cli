@@ -46,7 +46,7 @@ def prompt_user(word):
 def get_user_input(list):
     for question in list:
         print(prompt_user(question))
-        user_input = "".join([j for j in input().split])
+        user_input = "".join([j for j in input().split()])
         while user_input == "" or user_input in answer_dict:
             print("try again")
             user_input = "".join([j for j in input().split()])
